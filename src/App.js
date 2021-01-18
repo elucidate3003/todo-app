@@ -31,23 +31,23 @@ export default class Home extends Component {
 	removeTodo(name, type) {
 		let array, index;
 		switch (type) {
-			case TASK_STATUSES.TO_DO: {
+			case TASK_STATUSES.TO_DO: 
 				array = this.state.list;
 				index = array.indexOf(name);
 				array.splice(index, 1);
 				this.setState({ list: array });
 				localStorage.setItem('todo', JSON.stringify(array));
-			} break;
-			case TASK_STATUSES.DONE: {
+				break;
+			case TASK_STATUSES.DONE: 
 				array = this.state.done;
 				index = array.indexOf(name);
 				array.splice(index, 1);
 				this.setState({ done: array });
 				localStorage.setItem('done', JSON.stringify(array));
-			} break;
-			default: {
+			 break;
+			default: 
 				// nothing
-			} break;
+			 break;
 		}
 	}
 	completeTodo(name) {
