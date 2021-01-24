@@ -8,7 +8,7 @@ export const TASK_STATUSES = {
 	DONE: 'DONE'
 };
 
-export default (props) => {
+export const ToDo =  (props) => {
 	const handleChange = (name, type) => {
 		props.remove(name, type)
 	};
@@ -31,11 +31,11 @@ export default (props) => {
 
 	return (
 		<div>
-			
 			<ul>{rlist}</ul>
-			<h1>Completed tasks </h1>
-			{props.done.length}
+			<h3>Completed tasks = {props.done.length} </h3>
 			<ul>{dlist}</ul>
 		</div>
 	);
 }
+
+export default ToDo

@@ -76,10 +76,13 @@ export default class Home extends Component {
 	render() {
 		return (
 			<div className="header">
+				
 				<h1>My tasks</h1>
 				<input placeholder="Eg:Buy Groceries!" maxLength={80} value={this.state.task} type='text' onKeyPress={this.handleKey} task={this.state.task} onChange={this.onChange}/>
 				<button onClick={this.handleClick}>+</button>
-				<ToDo tasks={this.state.list} done={this.state.done} remove={this.removeTodo} complete={this.completeTodo}/>
+				<button type="submit" id= "show" onClick={ ToDo.rlist }></button>
+
+			    <ToDo tasks={this.state.list} done={this.state.done} remove={this.removeTodo} complete={this.completeTodo} /> 
 			</div>
 		);
 	}
